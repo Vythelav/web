@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/open.css">
+  <title>Авторизация</title>
+</head>
+
+<body>
+
+  <div class="form_auth_block" id="model">
+    <div class="form_auth_block_content">
+      <p class="form_auth_block_head_text">Авторизация</p>
+      <form id="loginForm" class="form_auth_style">
+        <label>Введите Ваш email</label>
+        <input id="open_email" type="email" name="auth_email" placeholder="Введите Ваш email" required>
+        <label>Введите Ваш пароль</label>
+        <input id="password" type="password" name="auth_pass" placeholder="Введите пароль" required>
+        <button class="form_auth_button" type="submit" >Войти</button>
+        <input class="form_auth_button" type="button" onclick="history.back();" value="Назад" />
+      </form>
+    </div>
+  </div>
+
+</body>
+
+</html>
