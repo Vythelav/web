@@ -293,10 +293,25 @@ main a:active {
 
 .con{
     float: right;
-    
-    
+}
+.btnGoToTop {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 99;
+    font-size: 16px;
+    background-color: #4a2166;
+    color: #fff;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
+.btnGoToTop:hover {
+    background-color: #6d219c;
+}
 
 
 

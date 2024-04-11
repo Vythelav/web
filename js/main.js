@@ -6,6 +6,19 @@ let messageNodes = document.querySelector(`#message`);
 let buttonNode = document.querySelector(`#submit`);
 let openNode = document.getElementById('loginForm')
 
+function goToTop() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0
+}
+window.onscroll = function() {
+    var btnGoToTop = document.getElementById("btnGoToTop");
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        btnGoToTop.style.display = "block";
+    } else {
+        btnGoToTop.style.display = "none";
+    }
+}
+
 buttonNode.addEventListener(`click`, function () {
     let allFilled = true;
 
@@ -29,17 +42,70 @@ function changeImage() {
     }
 }
 
-// openNode.addEventListener('submit', function(event) {
-//     event.preventDefault();
+class Particle {
+    constructor(x, y, z, color) {
+        this.x = x;
+        this.y = y;
+        this.z = z;
+        let blurs = [0, 2, 1, 0];
+        this.blur = blurs[z];
+        this.speed = z;
+        this.color = color;
+    }
+    
+    Move(d) {
+        this.y += this.speed * d;
+    }
+}
 
-//     let email = document.getElementById('open_email');
-//     let password = document.getElementById('password');
+let scrollPosition = 0;
+const particlesContainer = document.getElementById("particles");
+const particles = [
+    new Particle(80, 200, 3, "#4d4361"),
+    new Particle(200, 400, 1, "#4d4361"),
+    new Particle(100, 500, 4, "#4d4361"),
+];
 
-//     if (email.value === 'slavik.gusarow@yandex.ru' && password.value === 'admin') {
-//         alert('Успешный вход в аккаунт!');
-//         window.location.href = './akk.html';
-//     } else {
-//         alert('Неверное имя пользователя или пароль. Попробуйте еще раз.');
-//     }
-// });
+Fill();
 
+window.addEventListener("scroll", function(e) {
+    Scroll(e);
+});
+
+function Scroll(e) {
+    let d = 0;
+    if (window.pageYOffset > scrollPosition) {
+        d = 1;
+    } else {
+        d = -1;
+    }
+    scrollPosition = window.pageYOffset;
+    
+    for (let i = 0; i < particles.length; i++) {
+        particles[i].Move(d);
+    }
+    
+    Fill();
+}
+
+function Fill() {
+    particlesContainer.innerHTML = "";
+    
+    for (let i = 0; i < particles.length; i++) {
+        const particle = particles[i];
+        const div = document.createElement("div");
+        div.style.position = "fixed";
+        div.style.left = particle.x + "px";
+        div.style.top = particle.y + "px";
+        div.style.filter = blur(`${particle.blur}px`);
+        div.style.borderRadius = "50%";
+        div.style.backgroundColor = particle.color;
+        div.style.zIndex = "1";
+        div.style.display = "block";
+        div.style.boxShadow = "0 0 10px rgba(0, 0, 0, 3.5)";
+        div.style.width = "20px";
+        div.style.height = "20px";
+        
+        particlesContainer.appendChild(div);
+    }
+}

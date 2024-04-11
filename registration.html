@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/registration.css">
+    <script src="./js/open.js" defer></script>
     <title>Регистрация</title>
 </head>
 
@@ -16,10 +17,10 @@
                 <label>Введите ваше имя</label>
                 <input type="text" name="auth_name" placeholder="Введите ваше имя" required>
                 <label>Введите Ваш email</label>
-                <input type="email" name="auth_email" placeholder="Введите Ваш email" required>
+                <input id="emailRegistr" type="email" name="auth_email" placeholder="Введите Ваш email" required>
                 <label>Введите Ваш пароль</label>
-                <input type="password" name="auth_pass" placeholder="Введите пароль" required>
-                <button class="form_auth_button">Зарегистрироваться</button>
+                <input id="passwordRegistr" type="password" name="auth_pass" placeholder="Введите пароль" required>
+                <button  class="form_auth_button"  onclick="addToValuesArray()">Зарегистрироваться</button>
                 <input class="form_auth_button" type="button" onclick="history.back();" value="Назад" />
             </form>
         </div>

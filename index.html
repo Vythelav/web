@@ -11,6 +11,7 @@
 </head>
 
 <body>
+
   <header>
     <div class="content">
       <div class="conteynner">
@@ -32,63 +33,71 @@
     </div>
     <hr class="hr">
   </header>
-  
+
   <main>
+
     <div class="main_conteyner">
-      <div class="item">
-        <div class="item_title">Начало работы WPF</div>
-        <a href="./pageOne.html">Перейти</a>
-      </div>
-      <div class="item">
-        <div class="item_title">Введение в WPF в Visual Studio </div>
-        <a href="./pageTwo.html">Перейти</a>
 
-      </div>
-      <div class="item">
-        <div class="item_title">Создание классического приложения WPF</div>
-        <a href="./pageThree.html">Перейти</a>
+        <div class="item">
+          <div class="item_title">Начало работы WPF</div>
+          <a href="./pageOne.html">Перейти</a>
+        </div>
+        <div class="item">
+          <div class="item_title">Введение в WPF в Visual Studio </div>
+          <a href="./pageTwo.html">Перейти</a>
 
-      </div>
-      <div class="item">
-        <div class="item_title">Структура проекта WPF</div>
-        <a href="./pageFore.html">Перейти</a>
+        </div>
+        <div class="item">
+          <div class="item_title">Создание классического приложения WPF</div>
+          <a href="./pageThree.html">Перейти</a>
 
-      </div>
-      <div class="item">
-        <div class="item_title">Пошаговые руководства по WPF</div>
-        <a href="./pageFife.html">Перейти</a>
+        </div>
+        <div class="item">
+          <div class="item_title">Структура проекта WPF</div>
+          <a href="./pageFore.html">Перейти</a>
 
-      </div>
+        </div>
+        <div class="item">
+          <div class="item_title">Пошаговые руководства по WPF</div>
+          <a href="./pageFife.html">Перейти</a>
+
+        </div>
+        
     </div>
   </main>
   <footer>
     <div class="conter">
-    <div class="cont">
-      <form name="form" id="form_message">
-        
-        <h2>Форма обратной связи.</h2>
-        <p>
-        <div  class="titles">Ваше имя*</div> <input id="name" class="input" name="name" type="text" /> </p>
+      <div class="cont">
+        <form name="form" id="form_message">
 
-        <p>
-        <div class="titles">Электронная почта*</div> <input id="email" class="input" name="email" type="text" /> </p>
+          <h2>Форма обратной связи.</h2>
+          <p>
+          <div class="titles">Ваше имя*</div> <input id="name" class="input" name="name" type="text" /> </p>
 
-        <p>
-        <div class="titles">Тема сообщения</div> <input id="subjects" class="input" name="subjects" type="text" /> </p>
+          <p>
+          <div class="titles">Электронная почта*</div> <input id="email" class="input" name="email" type="text" /> </p>
 
-        <p>
-        <div class="titles">Текст сообщения:</div><textarea id="message" name="message" cols="22" rows="5"></textarea></p>
-        
-        <p><button id="submit">Отправить</button></p>
-        
-      </form>
-      <div class="image_cont">
-        <img id="imeg" class="imeg" src="./assets/smile.png" alt="Not" onclick="changeImage()">
+          <p>
+          <div class="titles">Тема сообщения</div> <input id="subjects" class="input" name="subjects" type="text" />
+          </p>
+
+          <p>
+          <div class="titles">Текст сообщения:</div><textarea id="message" name="message" cols="22" rows="5"></textarea>
+          </p>
+
+          <p><button id="submit">Отправить</button></p>
+
+        </form>
+        <div class="image_cont">
+          <img id="imeg" class="imeg" src="./assets/smile.png" alt="Not" onclick="changeImage()">
+        </div>
+        <button onclick="goToTop()" class="btnGoToTop" id="btnGoToTop">Наверх</button>
+
       </div>
-      </div>
-      
-  </div>
+    </div>
   </footer>
+  
+  <div class="particles" id="particles"></div>
 </body>
 
 </html>
