@@ -48,7 +48,7 @@ nav {
 }
 
 nav a {
-    border: 4px double #301a4e;
+    
     border-radius: 20px;
     text-decoration: none;
     padding: 5px;
@@ -57,7 +57,7 @@ nav a {
 }
 
 nav a:hover {
-    border: 4px double #fff;
+   
     transition: all 300ms;
     padding: 10px;
 }

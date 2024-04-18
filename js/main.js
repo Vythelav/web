@@ -6,18 +6,22 @@ let messageNodes = document.querySelector(`#message`);
 let buttonNode = document.querySelector(`#submit`);
 let openNode = document.getElementById('loginForm')
 
-function goToTop() {
-    document.body.scrollTop = 0;
-    document.documentElement.scrollTop = 0
-}
-window.onscroll = function() {
-    var btnGoToTop = document.getElementById("btnGoToTop");
-    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-        btnGoToTop.style.display = "block";
-    } else {
-        btnGoToTop.style.display = "none";
+const btnToTop = document.querySelector('.btnGoToTop');
+
+    window.addEventListener('scroll', () => {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            btnToTop.style.display = 'block';
+        } else {
+            btnToTop.style.display = 'none';
+        }
+    });
+
+    function scrollToTop() {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
     }
-}
 
 buttonNode.addEventListener(`click`, function () {
     let allFilled = true;
@@ -63,7 +67,13 @@ const particlesContainer = document.getElementById("particles");
 const particles = [
     new Particle(80, 200, 3, "#4d4361"),
     new Particle(200, 400, 1, "#4d4361"),
-    new Particle(100, 500, 4, "#4d4361"),
+    new Particle(100, 540, 4, "#4d4361"),
+    new Particle(210, 300, 3, "#4d4361"),
+    new Particle(200, 500, 2, "#4d4361"),
+    new Particle(100, 160, 1, "#4d4361"),
+    new Particle(130, 300, 4, "#4d4361"),
+    new Particle(160, 430, 3, "#4d4361"),
+
 ];
 
 Fill();
