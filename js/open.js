@@ -1,36 +1,47 @@
-let users = {
-    email: [],
-    password: []
-};
 
 function registerUser() {
-    let emailRegistr = document.getElementById("emailRegistr").value;
-    let passwordRegistr = document.getElementById("passwordRegistr").value;
+    const email = document.getElementById('emailRegistr').value;
+    const password = document.getElementById('passwordRegistr').value;
 
-    users.email.push(emailRegistr);
-    users.password.push(passwordRegistr);
-    window.location.href = 'open.html';
-
-    alert("Регистрация успешна");
+    fetch('http://localhost:3000/register', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ email: email, password })
+    })
+    .then(response => response.text())
+    .then(data => {
+        console.log(data);
+        if (data === 'Пользователь успешно зарегистрирован') {
+            window.location.href = 'open.html';
+        } else {
+            alert('Ошибка при регистрации');
+        }
+    });
 }
 
-document.getElementById("loginForm").addEventListener("submit", function (event) {
-    event.preventDefault();
 
-    let email = document.getElementById("open_email").value;
-    let password = document.getElementById("password").value;
-    let found = false;
 
-    for (let i = 0; i < users.email.length; i++) {
-        if (email === users.email[i] && password === users.password[i]) {
-            alert("Вход выполнен успешно");
-            window.location.href = 'akk.html';
-            found = true;
-            break;
+function loginUser() {
+    const email = document.getElementById('open_email').value;
+    const password = document.getElementById('password').value;
+
+    fetch('http://localhost:3000/login', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ email, password })
+    })
+    .then(response => response.text())
+    .then(data => {
+        console.log(data);
+        if (data === 'Вход выполнен успешно') {
+            window.location.href = 'open.html';
+        } else {
+            alert('Неправильные данные для входа');
         }
-    }
+    });
+}
 
-    if (!found) {
-        alert("Такого пользователя не существует");
-    }
-});

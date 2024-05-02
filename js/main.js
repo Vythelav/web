@@ -97,7 +97,9 @@ function Scroll(e) {
     
     Fill();
 }
-
+function homePage(){
+    window.location.href = 'index.html';
+}
 function Fill() {
     particlesContainer.innerHTML = "";
     

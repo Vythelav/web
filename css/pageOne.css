@@ -1,6 +1,6 @@
 body {
     margin: 0 auto;
-    background: linear-gradient(to bottom right, rgb(61, 51, 81), rgb(255, 255, 255));
+    background: linear-gradient(to bottom right, rgb(59, 44, 92), rgb(152, 152, 152));
     font-family: Arial, Helvetica, sans-serif;
     width: 100%;
     height: 100%;
@@ -34,6 +34,7 @@ body {
     gap: 10px;
     font-size: 40px;
     font-style: italic;
+    cursor: pointer;
 
 }
 
@@ -87,15 +88,17 @@ nav a:active {
 
 
 footer {
-    background-color: #301a4e;
-    opacity: 0.4;
-    width: 100%;
-    height: 8vh;
-    position: fixed;
-    left: 0;
-    right: 0;
-    bottom: 0;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
 }
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
 
 h1{
     margin: 50px 0;
@@ -123,12 +126,10 @@ hr {
 }
 .main_text{
     width: 700px;
-    text-align: center;
+    text-align: justify;
     font-size: 20px;
     color: #fff;
-    font-weight: 700;
     padding: 25px;
-    font-style: italic;
 }
 @media (max-width:376px) {
     .item {
