@@ -111,15 +111,59 @@ hr {
 }
 footer {
     background-color: #333;
-    color: #fff;
+    color: #000;
     text-align: center;
     padding: 20px 0;
+    
+}
+
+
+
+
+#quiz {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.question {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.vopros {
+    margin-bottom: 15px;
+}
+
+input[type="radio"] {
+    margin-right: 10px;
+}
+
+button#otvet {
+    background-color: #3b2c5c;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button#otvet:hover {
+    background-color: #0056b3;
+}
+
+#result {
+    margin-top: 20px;
+    color: #fff;
 }
 
 .footer-content {
-    max-width: 1200px;
-    margin: 0 auto;
+    text-align: center;
+    color: #555;
+    font-size: 14px;
 }
+
 
 
 @media (max-width:376px) {

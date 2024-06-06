@@ -19,8 +19,9 @@
             <hr>
             <div class="content1">
                 <nav>
-                    <a href="./index.html">Главная</a>
-                    <a href="./index.html">Контакты</a>
+                    <a href="./homePage.html">Главная</a>
+                    <a href="./index.html">Курсы</a>
+                    <a href="#form_message">Контакты</a>
                 </nav>
 
                 <nav>
@@ -61,13 +62,34 @@
                 </p>
             </div>
         </div>
+
     </main>
     <footer>
+
+        <div id="quiz">
+            <div class="question">1. Что такое WPF?</div>
+            <div class="vopros">
+                <input type="radio" name="q1" value="a"> это фреймворк для создания графических пользовательских
+                интерфейсов
+                <input type="radio" name="q1" value="b"> это фреймворк для создания приложений на андройд
+                <input type="radio" name="q1" value="c"> это фреймворк для создания сайтов
+            </div>
+            <div class="vopros">
+                <div class="question">2. Для чего она нужна?</div>
+                <input type="radio" name="q2" value="a"> Вообще не нужна
+                <input type="radio" name="q2" value="b"> Позволяет создавать клиентские приложения
+                <input type="radio" name="q2" value="c"> Дает преимущество
+            </div>
+            <button id="otvet" onclick="submitQuiz()">Проверить ответы</button>
+        </div>
+
+        <div id="result"></div>
+
         <div class="footer-content">
             <p>&copy; 2024 Процесс создания десктопных приложений с помощью WPF и С#. Все права защищены.</p>
         </div>
     </footer>
-    
+
 </body>
 
 </html>

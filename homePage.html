@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Процесс создания десктопных приложений с помощью WPF и С#</title>
+    <link rel="stylesheet" href="css/index.css">
+    <script src="./js/main.js" defer></script>
+</head>
+
+<body>
+
+    <header>
+        <div class="content">
+            <div class="conteynner">
+                <div id="logo" class="logo" onclick="homePage()">C#</div>
+                <div class="text"><span>Процесс создания десктопных приложений с помощью WPF и С#</span></div>
+            </div>
+            <hr>
+            <div class="content1">
+                <nav>
+                    <a href="./homePage.html">Главная</a>
+                    <a href="./index.html">Курсы</a>
+                    <a href="#form_message">Контакты</a>
+                </nav>
+
+                <nav>
+                    <a href="./open.html">Войти</a>
+                    <a href="./registration.html">Регистрация</a>
+                </nav>
+            </div>
+        </div>
+        <hr class="hr">
+    </header>
+
+    <main>
+
+        <p class="home">Добро пожаловать на курс по WPF! Изучите основы Windows Presentation Foundation (WPF) и создайте удивительные
+            графические пользовательские интерфейсы для ваших приложений. Начните свое путешествие в мире разработки
+            интерфейсов прямо сейчас.</p>
+    </main>
+    <footer>
+        <div class="conter">
+            <div class="cont">
+                <form name="form" id="form_message">
+
+                    <h2>Форма обратной связи.</h2>
+                    <p>
+                    <div class="titles">Ваше имя*</div> <input id="name" class="input" name="name" type="text" /> </p>
+
+                    <p>
+                    <div class="titles">Электронная почта*</div> <input id="email" class="input" name="email"
+                        type="text" /> </p>
+
+                    <p>
+                    <div class="titles">Тема сообщения</div> <input id="subjects" class="input" name="subjects"
+                        type="text" />
+                    </p>
+
+                    <p>
+                    <div class="titles">Текст сообщения:</div><textarea id="message" name="message" cols="22"
+                        rows="5"></textarea>
+                    </p>
+
+                    <p><button id="submit">Отправить</button></p>
+
+                </form>
+            
+                <button onclick="scrollToTop()" class="btnGoToTop" id="btnGoToTop">Наверх</button>
+
+            </div>
+        </div>
+    </footer>
+
+    <div class="particles" id="particles"></div>
+</body>
+
+</html>

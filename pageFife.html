@@ -19,8 +19,9 @@
             <hr>
             <div class="content1">
                 <nav>
-                    <a href="./index.html">Главная</a>
-                    <a href="">Контакты</a>
+                    <a href="./homePage.html">Главная</a>
+                    <a href="./index.html">Курсы</a>
+                    <a href="#form_message">Контакты</a>
                 </nav>
 
                 <nav>
@@ -117,11 +118,36 @@
             </div>
         </div>
         <footer>
+
+            <div id="quiz">
+                <div class="question">1. Какие типы данных поддерживает WPF для привязки данных и как это работает?
+                </div>
+                <div class="vopros">
+                    <input type="radio" name="q1" value="a"> WPF поддерживает различные типы данных для привязки данных,
+                    такие как объекты
+                    <input type="radio" name="q1" value="b"> Привязка данных в WPF позволяет автоматически обновлять
+                    интерфейс
+                    <input type="radio" name="q1" value="c"> только примитивные
+                </div>
+                <div class="vopros">
+                    <div class="question">2. Какие инструменты и технологии можно использовать в сочетании с WPF для
+                        разработки приложений?</div>
+                    <input type="radio" name="q2" value="a"> Карандаш и ручка
+                    <input type="radio" name="q2" value="b"> Для разработки приложений на WPF можно использовать
+                    инструменты Visual Studio, Blend, Prism
+                    <input type="radio" name="q2" value="c"> Для разработки приложений на WPF можно использовать только
+                    один инструмент - Visual Studio.
+                </div>
+                <button id="otvet" onclick="submitQuiz()">Проверить ответы</button>
+            </div>
+
+            <div id="result"></div>
+
             <div class="footer-content">
                 <p>&copy; 2024 Процесс создания десктопных приложений с помощью WPF и С#. Все права защищены.</p>
             </div>
         </footer>
-        
+
 </body>
 
 </html>

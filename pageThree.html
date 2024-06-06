@@ -19,8 +19,9 @@
             <hr>
             <div class="content1">
                 <nav>
-                    <a href="./index.html">Главная</a>
-                    <a href="">Контакты</a>
+                    <a href="./homePage.html">Главная</a>
+                    <a href="./index.html">Курсы</a>
+                    <a href="#form_message">Контакты</a>
                 </nav>
 
                 <nav>
@@ -282,6 +283,25 @@
         </div>
     </main>
     <footer>
+       
+        <div id="quiz">
+            <div class="question">1. Что такое XAML?</div>
+            <div class="vopros">
+                <input type="radio" name="q1" value="a"> XAML - это декларативный язык разметки
+                <input type="radio" name="q1" value="b">  XAML - это акроним от "eXtreme Application Markup Language"
+                <input type="radio" name="q1" value="c"> это фреймворк
+            </div>
+            <div class="vopros">
+                <div class="question">2. Какие инструменты можно использовать для разработки приложений на WPF?</div>
+                <input type="radio" name="q2" value="a"> Для разработки приложений на WPF можно использовать только блокнот и карандаш.
+                <input type="radio" name="q2" value="b"> Для разработки приложений на WPF можно использовать различные интегрированные среды разработки
+                <input type="radio" name="q2" value="c"> Компьютер
+            </div>
+            <button id="otvet" onclick="submitQuiz()">Проверить ответы</button>
+        </div>
+
+        <div id="result"></div>
+
         <div class="footer-content">
             <p>&copy; 2024 Процесс создания десктопных приложений с помощью WPF и С#. Все права защищены.</p>
         </div>

@@ -19,8 +19,9 @@
             <hr>
             <div class="content1">
                 <nav>
-                    <a href="./index.html">Главная</a>
-                    <a href="">Контакты</a>
+                    <a href="./homePage.html">Главная</a>
+                    <a href="./index.html">Курсы</a>
+                    <a href="#form_message">Контакты</a>
                 </nav>
 
                 <nav>
@@ -69,6 +70,25 @@
         </div>
     </main>
     <footer>
+       
+        <div id="quiz">
+            <div class="question">1. Какие основные преимущества WPF?</div>
+            <div class="vopros">
+                <input type="radio" name="q1" value="a"> WPF обладает мощными возможностями по созданию интерактивных и стильных пользовательских интерфейсов 
+                <input type="radio" name="q1" value="b"> создает приложений на андройд
+                <input type="radio" name="q1" value="c"> Основное преимущество WPF - это возможность создания анимированных 3D-моделей в приложениях.
+            </div>
+            <div class="vopros">
+                <div class="question">2. Чем WPF отличается от WinForms?</div>
+                <input type="radio" name="q2" value="a"> Они одинаковые 
+                <input type="radio" name="q2" value="b"> WPF использует векторную графику для рендеринга пользовательского интерфейса
+                <input type="radio" name="q2" value="c"> WPF и WinForms - это два разных названия для одной и той же технологии разработки Windows-приложений.
+            </div>
+            <button id="otvet" onclick="submitQuiz()">Проверить ответы</button>
+        </div>
+
+        <div id="result"></div>
+
         <div class="footer-content">
             <p>&copy; 2024 Процесс создания десктопных приложений с помощью WPF и С#. Все права защищены.</p>
         </div>

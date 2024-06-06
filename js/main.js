@@ -98,7 +98,7 @@ function Scroll(e) {
     Fill();
 }
 function homePage(){
-    window.location.href = 'index.html';
+    window.location.href = 'homePage.html';
 }
 function Fill() {
     particlesContainer.innerHTML = "";
@@ -120,4 +120,21 @@ function Fill() {
         
         particlesContainer.appendChild(div);
     }
+}
+
+function submitQuiz() {
+    let score = 0;
+
+    const q1 = document.querySelector('input[name="q1"]:checked').value;
+    const q2 = document.querySelector('input[name="q2"]:checked').value;
+
+    if (q1 === "a") {
+        score++;
+    }
+
+    if (q2 === "b") {
+        score++;
+    }
+
+    document.getElementById("result").innerHTML = "Вы набрали " + score + " из 2 баллов.";
 }
